@@ -1,6 +1,10 @@
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
 from passlib.context import CryptContext
+from fastapi.security import HTTPBearer
+
+security = HTTPBearer()
+
 
 # PASSWORD HASHING
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
